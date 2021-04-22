@@ -1,5 +1,6 @@
 import os.path as op
 import numpy as np
+np.float_ = np.float64
 import os
 import glob
 import soundfile as sf
@@ -9,6 +10,7 @@ import warnings
 import pandas as pd
 from .aggregate import TrackStore, MethodStore, EvalStore, json2df
 from . import metrics
+from . metrics import disable_cupy, clear_cupy_cache
 
 
 def _load_track_estimates(track, estimates_dir, output_dir, ext="wav"):
