@@ -59,7 +59,7 @@ if __name__ == "__main__":
         extras_require={  # Optional
             'dev': ['check-manifest'],
             'tests': ['pytest'],
-            'cupy': ['cupy-cuda12x'],
+            'cupy': ['cupy-cuda12x', 'nvidia-cuda-runtime-cu12==12.4.*'],
             'docs': [
                 'sphinx',
                 'sphinx_rtd_theme',
